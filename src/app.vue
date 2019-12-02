@@ -1,9 +1,10 @@
 <template>
     <div id="app">
-        <div id="cover"></div>
-        <Header></Header>
-        <Todo></Todo>
-        <Footer></Footer>
+        <div id="cover">
+            <Header></Header>
+            <Todo></Todo>
+            <Footer></Footer>
+        </div>
     </div>
 </template>
 
@@ -22,11 +23,13 @@
 </script>
 
 <style lang="stylus" scoped>
-#cover{
+#cover
     position absolute 
     left 0
     right 0
     top 0
     bottom 0
-    }
+    background #000
+    background-size cover
+    opacity .8
 </style>

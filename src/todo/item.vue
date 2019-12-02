@@ -1,5 +1,5 @@
 <template>
-    <div :class="['todo-item',todo.compeleted ? 'completed': '']">
+    <div :class="['todo-item',todo.completed ? 'completed': '']">
         <input
             type="checkbox"
             class="toggle"
@@ -20,11 +20,25 @@ export default {
         }
     },
     methods:{
-        deleteTodo(){}
+        deleteTodo(){
+            this.$emit('del',this.todo.id);
+        }
     }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="styl" scoped>
+.todo-item
+    font-size 30px
+    line-height 50px
+    border-bottom 1px #ccc solid
+    
+label
+    margin-right 65%
 
+.destory
+    width 20px
+    height 20px
+    border 1px #ccc solid
+    border-radius 50%
 </style>
