@@ -6,7 +6,7 @@
             v-model="todo.completed"
         >
         <label>{{todo.content}}</label>
-        <button class="destory" @click="deleteTodo"></button>
+        <button :class="$style.destory" @click="deleteTodo"></button>
     </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="styl" scoped>
+<style lang="stylus" module>
 .todo-item
     font-size 30px
     line-height 50px
