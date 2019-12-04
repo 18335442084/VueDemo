@@ -44,8 +44,8 @@ if(isDev){
                         {
                             loader: 'css-loader',
                             options: {
-                                // modules: true,
-                                localsConvention: 'camelCase'
+                                //modules: true,
+                                //localsConvention: 'camelCase'
                                 //localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]'
                             }
                         },

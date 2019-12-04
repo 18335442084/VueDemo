@@ -1,11 +1,11 @@
 <template>
-    <header class="main-header">
+    <header class="header">
         <h1>Todo</h1>
     </header>
 </template>
 
-<style lang="stylus" scoped>
-.main-header
+<style lang="stylus" scope>
+.header
     text-align center
 
     h1
