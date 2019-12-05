@@ -16,9 +16,9 @@
 </style>
 
 <script>
-export default {
-    created() {
-        console.log('style: ', this.$style);
+    export default {
+        created() {
+            console.log('style: ', this.$style);
+        }
     }
-}
-</script>script>
+</script>

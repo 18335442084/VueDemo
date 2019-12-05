@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';//设置环境
 
 const createVueLoaderOptions = require('./vue-loader.config');
 const config = {
+    mode: process.env.NODE_ENV || 'production',
     target: 'web',
     entry: path.join(__dirname, '../client/index.js'),//配置入口文件，__dirname为项目文件的绝对路径
     output: {  //输出文件配置
@@ -15,6 +16,12 @@ const config = {
     },
     module:{
         rules:[
+            //{
+            //    test: /\.(vue|js|jsx)$/,
+            //    loader: 'eslint-loader',
+            //    exclude: /node_modules/,
+            //    enforce: 'pre'//预处理
+            //},
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',

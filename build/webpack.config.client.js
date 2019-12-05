@@ -63,15 +63,14 @@ if(isDev){
         devServer,
         plugins: definePlugins.concat([//数组
             new webpack.HotModuleReplacementPlugin(),
-            new webpack.NoEmitOnErrorsPlugin()
+            //new webpack.NoEmitOnErrorsPlugin() webpack4 废弃
         ])
     });
 }else{
     config = merge(baseConfig, {
-        mode: 'production',
         entry: {
             app: path.join(__dirname, '../client/index.js'),
-            vendor: ['vue']//供应商，框架
+            //vendor: ['vue']//供应商，框架  配置runtimechunk替代
         },
         output: {
             filename: '[name].[chunkhash:8].js'
@@ -103,7 +102,8 @@ if(isDev){
         optimization: {
             splitChunks: {
                 chunks: 'all'
-            }
+            },
+            runtimeChunk: true
         }
     });
 
